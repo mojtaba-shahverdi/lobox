@@ -1,0 +1,49 @@
+@use "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lobox {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #6e11b0,
+    0 0 82px #6e11b0, 0 0 92px #6e11b0, 0 0 102px #6e11b0, 0 0 151px #6e11b0;
+  font-size: 2.5rem;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+  font-weight: 400;
+  line-height: 1;
+  font-family: "Vibur", sans-serif;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #6e11b0,
+      0 0 80px #6e11b0, 0 0 90px #6e11b0, 0 0 100px #6e11b0, 0 0 150px #6e11b0;
+  }
+
+  0% {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #6e11b0,
+      0 0 73px #6e11b0, 0 0 80px #6e11b0, 0 0 94px #6e11b0, 0 0 140px #6e11b0;
+  }
+}
